@@ -1,4 +1,3 @@
-Αυτό είναι το περιεχόμενο για το αρχείο **README.md** του αποθετηρίου σου. Είναι σχεδιασμένο να φαίνεται επαγγελματικό, να συνδέεται άμεσα με την επιστημονική σου εργασία και να καθοδηγεί τον χρήστη στην εκτέλεση του demo.
 
 ---
 
@@ -14,19 +13,16 @@ The framework addresses the "digital coordination gap" by synthesizing data from
 
 ## Key Features
 
-* 
+
 **Demand Forecasting:** Utilizes LSTM (Long Short-Term Memory) networks for high-precision localized demand prediction.
 
 
-* 
 **Autonomous Orchestration:** A central "Master Model" that balances immediate grid demand with multi-modal storage (Batteries/Hydrogen).
 
 
-* 
 **Scalable Architecture:** Built for containerized deployment using Docker and Kubernetes.
 
 
-* 
 **Waste Mitigation:** Engineered to reduce energy curtailment from the 10% global average down to 0.5%.
 
 
@@ -94,6 +90,6 @@ Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energ
 
 ## License
 
-Distributed under the  License. See `LICENSE` for more information.
+Distributed under the CC0 1.0 Universal License. See `LICENSE` for more information.
 
 ---
