@@ -7,7 +7,7 @@ struct PowerReading {
 }
 
 fn analyze_peak(reading: PowerReading) -> bool {
-    let peak_threshold = 2500.0; // Κατώφλι ανίχνευσης αιχμής
+    let peak_threshold = 2500.0; 
     if reading.watts > peak_threshold {
         println!("[Edge-RS] High demand detected: {}W. Alerting EnerOS Central...", reading.watts);
         return true;
