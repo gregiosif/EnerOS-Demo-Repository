@@ -42,7 +42,7 @@ Installation & Execution
 Clone the repository:
 
 Bash
-git clone https://github.com/greg_ios/EnerOS-Framework-Demo.git
+git clone https://github.com/gregiosif/EnerOS-Framework-Demo.git
 cd EnerOS-Framework-Demo
 Run the AI Orchestrator (Python):
 
