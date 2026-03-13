@@ -12,7 +12,6 @@ class EnerOSEngine:
         print("[EnerOS] Neural Orchestration Layer Initialized.")
 
     def _build_model(self):
-        # Δημιουργία του LSTM μοντέλου όπως περιγράφεται στη μεθοδολογία [cite: 58, 61]
         model = Sequential([
             LSTM(50, activation='relu', input_shape=(10, 1)),
             Dense(1)
@@ -31,7 +30,6 @@ class EnerOSEngine:
         """Κεντρικός αλγόριθμος λήψης αποφάσεων (Master Model) [cite: 54, 55]"""
         surplus = prod - pred_dem
         if surplus > 0:
-            # Στόχος: Μείωση curtailment στο 0.5% [cite: 24, 73]
             if soc < 95:
                 status = "CHARGING_STORAGE"
                 routing = f"Redirecting {surplus:.2f} MW to Hydrogen/Battery."
@@ -44,21 +42,16 @@ class EnerOSEngine:
         
         return status, routing
 
-# Demo Execution
 if __name__ == "__main__":
     engine = EnerOSEngine()
     
-    # Προσομοίωση 10 ωρών ιστορικού ζήτησης (Edge-Consumer Analytics) [cite: 45, 46]
     history_demand = [120, 135, 150, 145, 160, 180, 200, 210, 205, 190]
     
-    # 1. Πρόβλεψη επόμενης ώρας
     predicted = engine.predict_demand(history_demand)
     
-    # 2. Λήψη δεδομένων παραγωγής και αποθήκευσης [cite: 47, 48]
-    current_prod = 250.0  # MW από Φωτοβολταϊκά/Ανεμογεννήτριες
-    current_soc = 45.0    # % Επίπεδο μπαταρίας
+    current_prod = 250.0  
+    current_soc = 45.0    
     
-    # 3. Ενορχήστρωση
     status, action = engine.orchestrate(current_prod, predicted, current_soc)
     
     print(f"\n--- EnerOS Real-Time Decision ---")
