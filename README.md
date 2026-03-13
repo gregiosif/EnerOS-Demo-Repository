@@ -84,7 +84,7 @@ The simulation demonstrates how the **Central Orchestrator** reacts to productio
 If you use this framework or the associated research in your work, please cite it as follows:
 
 ```text
-Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management. Zenodo. (https://doi.org/10.5281/zenodo.19004280)
 
 ```
 
