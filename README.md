@@ -1,95 +1,78 @@
+EnerOS: A Unified Software Framework for Intelligent Energy Orchestration
+Overview
+EnerOS is an integrated software ecosystem designed to monitor and manage energy flows in real-time. This repository contains the Proof-of-Concept (PoC) implementation of the framework, covering the Neural Orchestration Layer (Cloud), Edge-Consumer Analytics (Smart Meters), and Source-Level Telemetry.
 
----
+Based on the research paper:
 
-# EnerOS: A Unified Software Framework for Intelligent Energy Orchestration
+Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management.
 
-## Overview
+Key Features
+Neural Orchestration (Python/AI): Uses LSTM networks to forecast localized demand and manage energy routing.
 
-**EnerOS** is an integrated software ecosystem designed to monitor and manage energy flows in real-time. This repository contains the **Proof-of-Concept (PoC)** implementation of the Neural Orchestration Layer, as described in the research paper:
+Edge Computing (Rust): High-performance, memory-safe analytics running on smart meters for real-time peak detection.
 
-> *Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management.*
+Low-Latency Telemetry (C++): High-speed data acquisition from renewable sources (PV arrays, wind turbines).
 
-The framework addresses the "digital coordination gap" by synthesizing data from renewable sources, meteorological APIs, and consumer-side analytics to minimize energy waste.
+Waste Mitigation: Engineered to bridge the "digital coordination gap," reducing energy curtailment from 10% to 0.5%.
 
-## Key Features
+Containerized Deployment: Ready for global scaling via Docker and Kubernetes.
 
+Repository Structure
+eneros_engine.py: The core AI engine and decision-making logic (Python).
 
-**Demand Forecasting:** Utilizes LSTM (Long Short-Term Memory) networks for high-precision localized demand prediction.
+edge_meter.rs: Localized household analytics for smart meters (Rust).
 
+telemetry_node.cpp: High-speed source-level diagnostics (C++).
 
-**Autonomous Orchestration:** A central "Master Model" that balances immediate grid demand with multi-modal storage (Batteries/Hydrogen).
+Dockerfile: Configuration for containerizing the Python AI environment.
 
+requirements.txt: Python dependencies (TensorFlow, NumPy, Scikit-learn).
 
-**Scalable Architecture:** Built for containerized deployment using Docker and Kubernetes.
+Getting Started
+Prerequisites
+Python 3.9+
 
+Rust Compiler (rustc)
 
-**Waste Mitigation:** Engineered to reduce energy curtailment from the 10% global average down to 0.5%.
+C++ Compiler (g++)
 
+Docker (optional)
 
+Installation & Execution
+Clone the repository:
 
-## Repository Structure
-
-* `eneros_engine.py`: The core AI engine and decision-making logic.
-* `Dockerfile`: Configuration for containerizing the environment.
-* `requirements.txt`: Python dependencies (TensorFlow, NumPy, Scikit-learn).
-
-## Getting Started
-
-### Prerequisites
-
-* Python 3.9+
-* Docker (optional, for containerized execution)
-
-### Installation
-
-1. Clone the repository:
-```bash
+Bash
 git clone https://github.com/yourusername/EnerOS-Framework-Demo.git
 cd EnerOS-Framework-Demo
+Run the AI Orchestrator (Python):
 
-```
-
-
-2. Install dependencies:
-```bash
+Bash
 pip install -r requirements.txt
-
-```
-
-
-
-### Running the Demo
-
-Execute the orchestrator simulation:
-
-```bash
 python eneros_engine.py
+Run the Edge Meter Analytics (Rust):
 
-```
+Bash
+rustc edge_meter.rs && ./edge_meter
+Run the Source Telemetry Node (C++):
 
-### Running with Docker
+Bash
+g++ telemetry_node.cpp -o telemetry && ./telemetry
+Multi-Language Implementation Logic
+As detailed in the research paper, EnerOS utilizes a polyglot architecture to optimize performance across the grid:
 
-```bash
-docker build -t eneros-demo .
-docker run eneros-demo
+Python is used at the Orchestration Layer for its advanced AI/ML ecosystem.
 
-```
+Rust is deployed at the Consumer Edge to ensure thread safety and ultra-fast local processing on IoT hardware.
 
-## Expected Results
+C++ manages Source Telemetry to provide the sub-millisecond response times required for grid stabilization.
 
-The simulation demonstrates how the **Central Orchestrator** reacts to production spikes. By predicting demand, the system proactively redirects surplus energy to storage facilities, achieving the load-leveling effect documented in the research paper's results.
+Expected Results
+The simulation demonstrates the load-leveling effect: transferring consumption from peak hours to periods of high renewable production (Noon). This proactive management stabilizes the grid and is projected to reduce consumer energy costs by approximately 18%.
 
-## Citation
+Citation
+If you use this framework or the associated research, please cite it as follows:
 
-If you use this framework or the associated research in your work, please cite it as follows:
-
-```text
-Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management. Zenodo. (https://doi.org/10.5281/zenodo.19004280)
-
-```
-
-## License
-
-Distributed under the CC0 1.0 Universal License. See `LICENSE` for more information.
-
----
+Plaintext
+Iosifidis, G. (2026). EnerOS: A Unified Software Framework for Intelligent Energy Orchestration and Predictive Resource Management. Zenodo. https://doi.org/10.5281/zenodo.19004280
+License
+Distributed under the CC0 1.0 Universal License. See LICENSE for more information.
