@@ -42,7 +42,7 @@ Installation & Execution
 Clone the repository:
 
 Bash
-git clone https://github.com/yourusername/EnerOS-Framework-Demo.git
+git clone https://github.com/greg_ios/EnerOS-Framework-Demo.git
 cd EnerOS-Framework-Demo
 Run the AI Orchestrator (Python):
 
@@ -67,7 +67,7 @@ Rust is deployed at the Consumer Edge to ensure thread safety and ultra-fast loc
 C++ manages Source Telemetry to provide the sub-millisecond response times required for grid stabilization.
 
 Expected Results
-The simulation demonstrates the load-leveling effect: transferring consumption from peak hours to periods of high renewable production (Noon). This proactive management stabilizes the grid and is projected to reduce consumer energy costs by approximately 18%.
+The simulation demonstrates the load-leveling effect: transferring consumption from peak hours to periods of high renewable production (Noon). This proactive management stabilizes the grid and is prg18%.
 
 Citation
 If you use this framework or the associated research, please cite it as follows:
